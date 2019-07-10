@@ -1,0 +1,38 @@
+{
+  "name": "simple-crud-rest-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=development node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "await-to-js": "^2.0.1",
+    "body-parser": "^1.15.2",
+    "compression": "^1.7.3",
+    "dedent": "^0.7.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.3",
+    "is-there": "^4.4.3",
+    "lodash": "^4.17.10",
+    "mongodb": "^3.1.1",
+    "mysql": "^2.16.0",
+    "node-db-file-logger": "^1.0.4",
+    "node-statsd": "^0.1.1",
+    "parse-error": "^0.2.0",
+    "q": "^1.5.1",
+    "redis": "^2.8.0",
+    "response-time": "^2.3.2",
+    "validator": "^10.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "mocha": "^5.2.0",
+    "nodeload": "^0.4.0",
+    "nodemon": "^1.11.0"
+  }
+}
