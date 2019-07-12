@@ -28,6 +28,14 @@ module.exports = {
         password : "admin", 
         path : "mysql://localhost:3306/rest"
       },
+      rabbitmq : {
+        name : "rest",
+        host : "localhost",
+        port : 6379,
+        user : "root",
+        password : "admin", 
+        channel : "wabbit",
+      }
 
     },
     projectName : 'node-data-server'

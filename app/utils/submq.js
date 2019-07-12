@@ -36,6 +36,7 @@ amqp.connect().then(function(conn) {
     });
 
     function logMessage(msg) {
+      console.log(msg)
       console.log(msg.content.toString());
       ch.ack(msg);
     }

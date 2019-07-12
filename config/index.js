@@ -43,6 +43,15 @@ module.exports = {
     databasePwd: environmentOptions.database.redis.password
 
   },
-  mq : {},
+  rabbitmq : {
+    mqHost: environmentOptions.database.rabbitmq.host,
+    mqPort: environmentOptions.database.rabbitmq.port,
+    mqUser : environmentOptions.database.rabbitmq.user,
+    mqPassword : environmentOptions.database.rabbitmq.password,
+    mqChannel: environmentOptions.database.rabbitmq.channel,
+    mqExchange: environmentOptions.database.rabbitmq.exchange,
+    mqSubscribeQueue: environmentOptions.database.rabbitmq.squeue,
+    mqUrl: "aqmp://" + environmentOptions.database.rabbitmq.host + ":" + environmentOptions.database.rabbitmq.port
+  },
   appDir: require('app-root-path')
 };

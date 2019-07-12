@@ -37,7 +37,7 @@ let getStr = (uuid)=> {
 
 module.exports = {
     client : client,
-    getObject : getData,
+    getObject : getHash,
     getString : getStr
 }
 
