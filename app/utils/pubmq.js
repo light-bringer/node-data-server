@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 var amqp = require('amqplib');
-var exchange_name = 'pubsub';
-const CONN_URL = 'amqp://bssesmbt:7cI12dwUfUHyfXWct_EiEkcJyiORTR_G@mustang.rmq.cloudamqp.com/bssesmbt';
+var exchange_name = 'rabbit-bunny';
+const CONN_URL = '';
 
 amqp.connect(CONN_URL).then(function(conn) {
 

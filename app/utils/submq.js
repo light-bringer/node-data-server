@@ -1,9 +1,10 @@
 var amqp = require('amqplib');
 var os = require('os');
 var queue_name = process.pid + '@' + os.hostname();
-var exchange_name = 'pubsub';
+var exchange_name = 'rabbit-bunny';
+console.log(queue_name, exchange_name)
 
-amqp.connect('amqps://bssesmbt:7cI12dwUfUHyfXWct_EiEkcJyiORTR_G@mustang.rmq.cloudamqp.com/bssesmbt').then(function(conn) {
+amqp.connect().then(function(conn) {
 
   process.once('SIGINT', function() { conn.close(); });
 

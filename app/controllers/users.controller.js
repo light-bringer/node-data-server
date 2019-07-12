@@ -4,7 +4,7 @@ const _                = require('lodash');
 const config           = require(__dirname + '/../../config');
 const appDir           = config.appDir;
 const { to, ReE, ReS } = require(appDir + '/app/utils/utils.service');
-const userModel     = require(appDir + '/app/models/users.model');
+const userModel     = require(appDir + '/app/models/users.nosql.model');
 
 
 module.exports.getAll = async (req, res)=> {

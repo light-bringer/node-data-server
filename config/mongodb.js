@@ -1,8 +1,8 @@
 'use strict'
 
 
-const mongodb = require('mongodb')
-, config = require('./index');
+const mongodb = require('mongodb');
+const config = require('./index');
 
 var Server = mongodb.Server
 , MongoClient = mongodb.MongoClient;

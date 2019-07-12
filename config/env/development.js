@@ -20,6 +20,14 @@ module.exports = {
         password : "admin", 
         path : "mysql://localhost:3306/rest"
       },
+      redis : {
+        name : "rest",
+        host : "localhost",
+        port : 6379,
+        user : "root",
+        password : "admin", 
+        path : "mysql://localhost:3306/rest"
+      },
 
     },
     projectName : 'node-data-server'

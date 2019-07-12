@@ -34,5 +34,15 @@ module.exports = {
     databasePwd: environmentOptions.database.mysql.password
 
   },
+  redis : {
+    databaseUrl: environmentOptions.database.redis.path + environmentOptions.database.redis.name,
+    databaseHost: environmentOptions.database.mysql.host,
+    databasePort: environmentOptions.database.redis.port,
+    databaseName: environmentOptions.database.redis.name,
+    databaseUser: environmentOptions.database.redis.user,
+    databasePwd: environmentOptions.database.redis.password
+
+  },
+  mq : {},
   appDir: require('app-root-path')
 };

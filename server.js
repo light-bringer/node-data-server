@@ -11,7 +11,8 @@ const compression  = require('compression');
 const config       = require(__dirname + '/config');
 const appDir       = config.appDir;
 const logger       = require(appDir + '/config' + '/loggerconfig');
-const db           = require(appDir + '/config/mongodb.js');
+const db           = require(appDir + '/config/mongodb');
+const redis        = require(appDir + '/config/redis');
 const v1           = require(appDir + '/routes/v1');
 const isMaster     = cluster.isMaster;
 // const numWorkers   = cpus().length;
@@ -70,10 +71,17 @@ else {
   db.init(function(err) {
     let server =  app.listen(app.get('port'), ()=> {
       console.log('Express server listening on port : ' + server.address().port);
-    
+      
+      // Error checking for redis
+      redis.client.on("error", function (err) {
+        console.log("Error " + err);
+        loggerObj.error("Error " + err);
+      });
+
       var options = {
         db: db.client,
-        logger : loggerObj
+        logger : loggerObj,
+        redis : redis
       };
       app.use('/v1', v1);
       app.set('options', options);
