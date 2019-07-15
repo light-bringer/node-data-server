@@ -25,3 +25,7 @@ let getData_redis = async (uuid_key, options)=> {
         throw new Error(error.invalidData);
     }
 }
+
+module.exports = {
+    get : getData_redis
+}
