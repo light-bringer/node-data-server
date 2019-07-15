@@ -6,35 +6,36 @@ module.exports = {
     database: {
       mongodb : {
         name : "rest",
-        host : "localhost",
+        host : "docker-server.cloudapp.net",
         port : 27017,
         user : "root",
         password : "admin",
-        path : "mongodb://localhost:27017/"
+        path : "mongodb://docker-server.cloudapp.net:27017/"
       },
       mysql : {
         name : "rest",
-        host : "localhost",
+        host : "docker-server.cloudapp.net",
         port : "3306",
         user : "root",
         password : "admin", 
-        path : "mysql://localhost:3306/rest"
+        path : "mysql://docker-server.cloudapp.net:3306/"
       },
       redis : {
         name : "rest",
-        host : "localhost",
+        host : "docker-server.cloudapp.net",
         port : 6379,
         user : "root",
         password : "admin", 
-        path : "mysql://localhost:3306/rest"
+        path : "redis://docker-server.cloudapp.net:6379"
       },
       rabbitmq : {
         name : "rest",
-        host : "localhost",
-        port : 6379,
+        host : "docker-server.cloudapp.net",
+        port : 5672,
         user : "root",
         password : "admin", 
         channel : "wabbit",
+        path: "amqp://docker-server.cloudapp.net:5672"
       }
 
     },

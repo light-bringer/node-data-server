@@ -4,10 +4,12 @@ const redis  = require('redis');
 const config = require('./index');
 const util   = require('util');
 
+console.log(config.redis)
+
 let client = redis.createClient(config.redis.databasePort, config.redis.databaseHost);
 //client = util.promisify(client);
 
-let getHash = (uuid)=> {
+let getHash = async (uuid)=> {
     return new Promise((resolve, reject)=> {
         client.hgetall(uuid, (err, replyobject)=> {
             if(err) {
@@ -20,7 +22,7 @@ let getHash = (uuid)=> {
     });    
 }
 
-let getStr = (uuid)=> {
+let getStr = async (uuid)=> {
     return new Promise((resolve, reject)=> {
         client.get(uuid, (err, replyobject)=> {
             if(err) {

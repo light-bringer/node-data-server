@@ -36,7 +36,7 @@ module.exports = {
   },
   redis : {
     databaseUrl: environmentOptions.database.redis.path + environmentOptions.database.redis.name,
-    databaseHost: environmentOptions.database.mysql.host,
+    databaseHost: environmentOptions.database.redis.host,
     databasePort: environmentOptions.database.redis.port,
     databaseName: environmentOptions.database.redis.name,
     databaseUser: environmentOptions.database.redis.user,

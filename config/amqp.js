@@ -15,7 +15,7 @@ const consume = (isNoAck=false, durable=false, prefetch=null)=> {
     
     await exchange.assertQueue(queue_name, { durable: true, exclusive: true });
 
-    const consumeEmitter = new EventEmitter();
+    const consumeEmitter = new events();
     try {
         channel.consume(queue, message => {
             if (message !== null) {
@@ -24,14 +24,18 @@ const consume = (isNoAck=false, durable=false, prefetch=null)=> {
                 });
             } 
             else {
-            const error = new Error('NullMessageException');
-            consumeEmitter.emit('error', error);
-          }
-        }, {noAck: isNoAck})
-      } catch (error) {
-        consumeEmitter.emit('error', error)
+              let error = new Error('NullMessageException');
+              consumeEmitter.emit('error', error);
+            }
+          }, {noAck: isNoAck});
+        }
+        catch (error) {
+          consumeEmitter.emit('error', error);
       }
+
       return consumeEmitter;
-
-
 }
+
+module.exports = {
+  consume : consume
+};

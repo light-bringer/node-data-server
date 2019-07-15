@@ -78,6 +78,15 @@ else {
         loggerObj.error("Error " + err);
       });
 
+      redis.client.get('abc', (err, data)=> {
+        console.log(data, err)
+
+      });
+      redis.getObject("3012cc70-f0cf-45f9-b043-69dad98c023f").then(data=> {
+        console.log("key : 3012cc70-f0cf-45f9-b043-69dad98c023f")
+        console.log(data)
+      })
+  
       var options = {
         db: db.client,
         logger : loggerObj,
