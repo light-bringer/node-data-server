@@ -20,7 +20,7 @@
     "express": "^4.16.3",
     "is-there": "^4.4.3",
     "lodash": "^4.17.19",
-    "mongodb": "^3.1.1",
+    "mongodb": "^3.1.13",
     "mysql": "^2.16.0",
     "node-db-file-logger": "^1.0.4",
     "node-statsd": "^0.1.1",
