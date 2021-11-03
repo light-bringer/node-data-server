@@ -28,7 +28,7 @@
     "q": "^1.5.1",
     "redis": "^2.8.0",
     "response-time": "^2.3.2",
-    "validator": "^10.9.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
